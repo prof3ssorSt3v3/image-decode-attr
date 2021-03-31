@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Raleway:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: hsl(213, 50%, 80%);
+  color: hsl(213, 60%, 30%);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+header {
+  padding: 1rem 6rem;
+  background-color: hsl(213, 60%, 30%);
+  border-bottom: 2px solid hsl(213, 30%, 10%);
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+h1 {
+  margin: 0;
+  padding: 3rem 1rem 0.5rem;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 1px 1px 2px hsl(213, 50%, 80%);
+  color: hsl(213, 30%, 10%);
+}
+h2 {
+  margin: 0;
+  padding: 0.5rem 1rem 3rem;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: hsl(213, 50%, 80%);
+  text-shadow: 1px 1px 2px hsl(213, 30%, 10%);
+}
+main section {
+  padding: 1rem 6rem;
+  clear: both;
+  overflow: auto;
+}
+p {
+  padding: 0;
+  font-size: 1.2rem;
+  margin: 4rem 0;
+  clear: both;
+  overflow: auto;
+  position: relative;
+}
+p::before {
+  content: attr(data-num);
+  position: absolute;
+  font-size: 2rem;
+  top: 1rem;
+  color: white;
+  text-shadow: 1px 1px 2px #222;
+}
+p:nth-child(even)::before {
+  left: 1rem;
+}
+p:nth-child(odd)::before {
+  right: 1rem;
+}
+p img {
+  float: left;
+  margin: 0.5rem 1rem 1rem 0;
+  width: max(30vw, 300px);
+  /* at least 300px but no more than 30vw */
+}
+p:nth-child(odd) img {
+  float: right;
+  margin: 0.5rem 0 1rem 1rem;
+}
+section:nth-child(even) {
+  color: hsl(213, 50%, 80%);
+  background-color: hsl(213, 60%, 30%);
+}
